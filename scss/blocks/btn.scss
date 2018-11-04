@@ -1,0 +1,19 @@
+.btn {
+  border-radius: 5px;
+  padding: 10px 15px;
+  color:white;
+  text-decoration: none;
+  text-transform: uppercase;
+  }
+  .btn--red{
+    background:$orange;
+    &:hover{
+      background:red;
+     }
+  }
+  
+  .btn--black{
+    background: #2f3234;
+    margin-top: 17px;
+    display: flex;
+  }

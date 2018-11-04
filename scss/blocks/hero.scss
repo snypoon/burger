@@ -1,0 +1,35 @@
+.hero {
+  background: url('../img/mainbg.jpg') center center / cover no-repeat;
+}
+.hero__content{
+  display: flex;
+  align-items: center;
+  flex: .75;
+}
+.hero__text{
+  margin-left: 11px;
+  margin-top: 61px;
+}
+.title{
+  color: $yellow;
+  font-size: 72px;
+  font-family: 'Gagalin';
+  font-weight: normal;
+  margin-bottom: 20px;
+  &--color-black{
+    color: $black;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+}
+.hero__desc{
+  color: white;
+  font-size: 65px;
+  font-family: 'lifehack';
+  text-transform: lowercase;
+  line-height: 60px;
+}
+.to-next-section{
+  margin-top: auto;
+  margin-bottom: 40px;
+}
