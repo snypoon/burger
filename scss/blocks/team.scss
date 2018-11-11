@@ -1,5 +1,5 @@
 .team{
-  background: url('/img/teambg.jpg') center center / cover no-repeat;
+  background: url('../img/teambg.jpg') center center / cover no-repeat;
   display: flex;
   justify-content: flex-end;
 }
@@ -33,7 +33,7 @@
     height: rem(7px);
     display: inline-flex;
     margin-right: rem(10px);
-    background: url('/img/down.png')center center / cover no-repeat;  
+    background: url('../img/down.png')center center / cover no-repeat;  
   }
   @include tablets{
     font-size: rem(25px);}
@@ -75,7 +75,7 @@ padding-top: rem(9px);
   .team-acco__title{
     color: $yellow;
       &::before{
-       background: url('/img/up.png');
+       background: url('../img/up.png');
        }
     }
   }
