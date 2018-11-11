@@ -1,0 +1,81 @@
+.team{
+  background: url('/img/teambg.jpg') center center / cover no-repeat;
+  display: flex;
+  justify-content: flex-end;
+}
+.team__container{
+  width: 50%;
+  height: 100%;
+  background-color: rgba($color:$black, $alpha: .9);
+  padding: rem(100px);
+  @include tablets{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.team__title{
+  @extend .title;
+  margin-bottom: rem(46px);
+}
+.team-acco__title{
+  @extend .reviews__title;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  &::before{
+    content: "";
+    width: rem(9px);
+    height: rem(7px);
+    display: inline-flex;
+    margin-right: rem(10px);
+    background: url('/img/down.png')center center / cover no-repeat;  
+  }
+  @include tablets{
+    font-size: rem(25px);}
+   @include phones{
+     white-space: nowrap;
+   } 
+}
+.team-acco__content{
+  display: flex;
+  margin: rem(20px);
+  height: 0;
+  overflow: hidden;
+  @include tablets{
+    display: block;
+    }
+}
+
+.team-acco__text {
+  color:white;
+  font-weight: 300;
+  margin-left: rem(21px);
+  max-width: rem(208px);
+  line-height: rem(24px);
+  &-title{
+    font-weight: bold;
+  }
+  @include tablets{
+    margin: 0;
+    }  
+}
+.team-acco__text-content{
+padding-top: rem(9px);
+}
+.team-acco__item--active{
+  .team-acco__content{
+  overflow: initial;
+  height: 100%;
+  }
+  .team-acco__title{
+    color: $yellow;
+      &::before{
+       background: url('/img/up.png');
+       }
+    }
+  }
