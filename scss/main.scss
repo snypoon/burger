@@ -4,13 +4,23 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
+// Breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+// Media
+@import '../scss/layout/media.scss';
+
 // Import
 @import '../scss/layout/fonts.scss';
 @import '../scss/layout/base.scss';
 @import '../scss/blocks/hero.scss';
 @import '../scss/blocks/header.scss';
-@import '../scss/blocks/menu.scss';
+@import '../scss/blocks/nav.scss';
 @import '../scss/blocks/btn.scss';
 @import '../scss/blocks/best.scss';
 @import '../scss/blocks/reviews.scss';
-
+@import '../scss/blocks/menu.scss';
+@import '../scss/blocks/team.scss';
+@import '../scss/blocks/form.scss';
+@import '../scss/blocks/map.scss';

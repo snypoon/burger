@@ -1,0 +1,74 @@
+.map{
+  background: url('../img/map.jpg') center center / cover no-repeat;
+  position: relative;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: rem(60px);
+  background: url('../img/footerbg.jpg') center center / cover no-repeat;
+  @include phones{
+    height: rem(116px);
+  }
+}
+
+.footer__container{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  @include phones{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.footer__col{
+  width: 50%;
+  &.right{
+    text-align: right;
+    @include phones{
+      text-align: center;
+      margin-top: rem(20px);
+      }   
+  }
+ @include phones{
+  width: 100%;
+  }  
+}
+.contacts{
+  color:white;
+  font-style: normal;
+  line-height: rem(24px);
+}
+.contacts__phone{
+  color:$red;
+  font-weight: 700;
+  text-decoration: none;
+}
+.contacts, .contacts__phone{
+  @include phones{
+    font-size: 14px;
+  }
+}
+.phone{
+  width: rem(12px);
+  height: rem(11px);
+}
+.social__link{
+  margin-left: rem(20px);
+  text-decoration: none;
+}
+.socials__img{
+  height: rem(20px);
+  width: rem(20px);
+  fill: grey;
+  &:hover{
+    fill:white;
+    transform: scale(1.5);
+    }
+}

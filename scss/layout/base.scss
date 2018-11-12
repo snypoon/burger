@@ -1,3 +1,12 @@
+html{
+  font-size:rem(16px);
+  @include tablets {
+    font-size: 14px;
+  }
+  @include phones{
+    font-size: 13px;
+  }
+}
 html,body {
   height: 100%;
 }
@@ -21,20 +30,29 @@ table {
 * {
   box-sizing: border-box;
 } 
+input, textarea {
+  outline:none;
+}
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 .container{
   margin: 0 auto;
-  width: 940px;
+  max-width: rem(940px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  width: 100%;
+ 
   &--without-align{
     justify-content: initial;
   }
+  @include tablets{
+    width: 95%;
+  } 
 }
+
 
 
