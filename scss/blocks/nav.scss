@@ -29,3 +29,15 @@
       margin: 0 rem(16px);
     }
 }
+.hambureg__nav, .nav__link{
+  @include tablets{
+  font-size: rem(24px);
+  display: flex;
+  flex-direction: column;
+}
+}
+.hambureg__nav, .nav__link:after{
+  @include tablets{
+  margin: 15px auto;
+  }
+}
