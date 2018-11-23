@@ -1,0 +1,145 @@
+.slider {
+  background: linear-gradient(to bottom, rgba(249,180,59,1) 0%,rgba(255,124,0,1) 39%,rgba(255,127,4,1) 53%,rgba(255,127,4,1) 53%,rgba(255,127,4,1) 66%,rgba(255,127,4,1) 66%,rgba(255,167,61,1) 89%,rgba(255,167,61,1) 100%);
+  display: flex;
+}
+.slider__container{
+  flex-direction: initial;
+  align-items: center;
+}
+
+.slider__content{
+display: flex;
+position: relative;
+@include tablets{
+  flex-direction: column;
+  text-align: center;
+}
+}
+.slider__left,.slider__right{
+  width: 50%;
+  margin: auto;
+  @include tablets{
+    width: 100%;
+    }
+}
+.slider__right{
+  @include tablets{
+    padding: 0 15%;
+  }
+  @include phones{
+    padding: 0 ;
+  }
+}
+.burger__pic{
+  display: flex;
+  max-width: 100%;
+  @include tablets{
+    max-width: 65%;
+    margin: auto;
+    @include phones{
+      max-width: 100%;
+      }
+  }
+}
+.slider__title{
+  @extend .title;
+  color:white;
+  @include phones{
+    font-size: rem(50px);
+  }
+}
+.slider__text{
+  color: white;
+  line-height: rem(23.97px);
+  margin-top: rem(36px);
+}
+.slider__price{
+  margin-top: rem(36px);
+}
+.price{
+  display: inline-flex;
+  align-items: baseline;
+}
+.price__numb,.price__text{
+  @extend .title;
+  color: $red;
+}
+.price__text{
+  font-size: rem(30px);
+  margin-right: rem(30px);
+}
+.scroll{
+  margin: auto;
+  transition: all 0.3s;
+}
+.scroll:hover{
+  transform: scale(1.5);
+}
+.arrow-scroll__right{
+  transform: rotate(-90deg);
+}
+.arrow-scroll__left{
+  transform: rotate(90deg);
+}
+
+.composition{
+width: rem(90px);
+height: rem(90px);
+border-radius: rem(5px);
+background-color: $red;
+display: flex;
+position: absolute;
+text-align: center;
+@include tablets{
+  left: 15%;
+  top: -10%;
+  @include phones{
+    left: -10%;
+    top: -10%;
+  }
+}
+
+}
+.composition__content,{
+  margin: auto;
+}
+.composition__img{
+  height: rem(44px);
+  width: rem(46px);
+}
+.composition__text,.calories__text{
+  @extend .title;
+  color: white;
+  font-size: rem(14px);
+}
+.calories__weight{
+  background: url('../img/kkal.svg') 50% no-repeat;
+    width: rem(60px);
+    height: rem(60px);
+    position: relative;
+    background-size: contain;
+}
+.calories__weight_text{
+  @extend .title;
+  color: white;
+  font-size: rem(20px);
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.calories{
+  display: flex;
+  text-align: center;
+  top: 85%;
+  opacity: 0.5;
+  position: absolute;
+  @include tablets{
+    top: -9%;
+    left: 75%;
+    @include phones{
+      left: 90%;
+      top: -10%;
+    }
+  }
+}

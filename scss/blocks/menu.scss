@@ -55,6 +55,7 @@
   height: 100%;
   width: 0;
   overflow: hidden;
+  transition: width 0.3s;
 }
 .menu-acco__item--active{
   .menu-acco__block-text{
@@ -62,6 +63,9 @@
   }
   .menu-acco__content{
     overflow: initial;
-    width: 50%;
+    width: rem(550px);
+    @include tablets{
+      width: 100%;
+    }
   }
 }

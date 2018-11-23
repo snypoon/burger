@@ -10,6 +10,9 @@
   align-items: center;
   font-weight: 500;
   font-size: rem(13px);
+  @include tablets{
+    margin-right: rem(77px);
+  }
 }
 
 

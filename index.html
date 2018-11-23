@@ -46,14 +46,13 @@
             </div>
           </div>
           <button class="to-next-section">
-            <!-- <img src="./img/arrow-scroll.png" alt="to next section"> -->
             <svg class="arrow-scroll">
               <use xlink:href="./img/sprite.svg#arrow"></use>
             </svg>
           </button>
         </div>
-        <!-- Best Section -->
       </section>
+      <!-- Best Section -->
       <section class="best section">
         <div class="container">
           <div class="title title--color-black">Мы лучшие</div>
@@ -101,15 +100,68 @@
           </ul>
         </div>
       </section>
+      <!-- Slider Section -->
+      <section class="slider section">
+        <div class="container slider__container">
+          <button class="scroll scroll__prev">
+            <svg class="arrow-scroll arrow-scroll__left">
+              <use xlink:href="./img/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+          <div class="slider__content">
+              <div class="composition">
+                  <div class="composition__content">
+                    <svg class="composition__img">
+                      <use xlink:href="./img/sprite.svg#composition"></use>
+                    </svg>
+                    <div class="composition__text">Состав</div>
+                  </div>
+                </div>
+                <div class="calories">
+                    <div class="calories__content">
+                        <div class="calories__weight">
+                          <div class="calories__weight_text">1200</div>
+                        </div>
+                        <div class="calories__text">Ккал</div>
+                      </div>
+                </div>
+           <div class="slider__left">
+              <div class="burger__img">
+                <img src="./img/blackburger.png" alt="darkBeef" class="burger__pic">
+              </div>
+            </div>
+            <div class="slider__right">
+              <div class="slider__title">Dark BEEF Burger</div>
+              <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя
+                кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с
+                добавлением экзотического соуса чураско.</div>
+              <div class="slider__price">
+                <div class="price">
+                  <div class="price__numb">500</div>
+                  <div class="price__text">Рублей</div>
+                  <div class="button">
+                    <button class="btn btn--red">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="scroll scroll__next">
+            <svg class="arrow-scroll arrow-scroll__right">
+              <use xlink:href="./img/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
       <!-- Team Section -->
       <section class="team section">
         <div class="team__container">
 
           <div class="team__title">Команда</div>
           <ul class="team-acco">
-            <li class="team-acco__item">
+            <li class="team-acco__item team-acco__item--active">
               <a href="#" class="team-acco__title">Дэниэл Редклиф</a>
-              <div class="team-acco__content team-acco__content-active">
+              <div class="team-acco__content">
                 <div class="team-acco__pic">
                   <img class="team-acco__pic-img" src="./img/aphex.png" alt="teammate">
                 </div>
@@ -121,7 +173,7 @@
                 </div>
               </div>
             </li>
-            <li class="team-acco__item team-acco__item--active">
+            <li class="team-acco__item">
               <a href="#" class="team-acco__title">Ричард Джеймс</a>
               <div class="team-acco__content">
                 <div class="team-acco__pic">
@@ -418,55 +470,74 @@
             </div>
         </div>
         </form>
-    </div>
-    </section>
-    <!-- Map Section -->
-    <section class="map section">
-      <div class="map__container">
-        <footer class="footer">
-          <div class="container footer__container">
-            <div class="footer__col left">
-              <address class="contacts">
-                <div class="contacts__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-                <a href="tel:+78123771377" class="contacts__phone">
-                  <svg class="phone">
-                    <use xlink:href="./img/sprite.svg#phone"></use>
-                  </svg>
-                  +7 (812) 377-13-77</a>
-              </address>
-            </div>
-            <div class="footer__col right">
-              <div class="socials">
-                <a href="#" class="social__link">
-                  <svg class="socials__img">
-                    <use xlink:href="./img/sprite.svg#vk"></use>
-                  </svg>
-                </a>
-                <a href="#" class="social__link">
-                  <svg class="socials__img">
-                    <use xlink:href="./img/sprite.svg#fb"></use>
-                  </svg>
-                </a>
-                <a href="#" class="social__link">
-                  <svg class="socials__img">
-                    <use xlink:href="./img/sprite.svg#inst"></use>
-                  </svg>
-                </a>
-                <a href="#" class="social__link">
-                  <svg class="socials__img">
-                    <use xlink:href="./img/sprite.svg#tw"></use>
-                  </svg>
-                </a>
+
+      </section>
+      <!-- Map Section -->
+      <section class="map section">
+        <div class="map__container">
+          <footer class="footer">
+            <div class="container footer__container">
+              <div class="footer__col left">
+                <address class="contacts">
+                  <div class="contacts__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                  <a href="tel:+78123771377" class="contacts__phone">
+                    <svg class="phone">
+                      <use xlink:href="./img/sprite.svg#phone"></use>
+                    </svg>
+                    +7 (812) 377-13-77</a>
+                </address>
+              </div>
+              <div class="footer__col right">
+                <div class="socials">
+                  <a href="#" class="social__link">
+                    <svg class="socials__img">
+                      <use xlink:href="./img/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="social__link">
+                    <svg class="socials__img">
+                      <use xlink:href="./img/sprite.svg#fb"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="social__link">
+                    <svg class="socials__img">
+                      <use xlink:href="./img/sprite.svg#inst"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="social__link">
+                    <svg class="socials__img">
+                      <use xlink:href="./img/sprite.svg#tw"></use>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </footer>
-      </div>
+          </footer>
+        </div>
 
-    </section>
+      </section>
+    </div>
   </div>
+  <!-- Hamburger Menu -->
+  <div class="hamburger-menu__link" id="hamburger-menu__link">
+    <div class="hamburger-menu__bars" id="hamburger-menu__bars"></div>
   </div>
-  <!-- fixed-menu -->
+  <div class="hamburger__menu" id="hamburger__menu">
+    <div class="hamburger__menu__items">
+      <nav class="nav hamburger__nav">
+        <ul class="nav__list hamburger__nav__list">
+          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">О нас</a></li>
+          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Бургеры</a></li>
+          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Команда</a></li>
+          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Меню</a></li>
+          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Отзывы</a></li>
+          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Как мы работаем</a></li>
+          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
