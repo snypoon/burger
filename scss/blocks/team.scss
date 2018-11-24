@@ -47,7 +47,7 @@
   height: 0;
   overflow: hidden;
   @include tablets{
-    display: block;
+    flex-direction: column;
     }
 }
 

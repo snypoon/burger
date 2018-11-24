@@ -108,7 +108,8 @@
               <use xlink:href="./img/sprite.svg#arrow"></use>
             </svg>
           </button>
-          <div class="slider__content">
+          <ul class="slider__content">
+            <li class="slider__item">
               <div class="composition">
                   <div class="composition__content">
                     <svg class="composition__img">
@@ -145,7 +146,46 @@
                 </div>
               </div>
             </div>
-          </div>
+          </li>
+          <li class="slider__item">
+              <div class="composition">
+                  <div class="composition__content">
+                    <svg class="composition__img">
+                      <use xlink:href="./img/sprite.svg#composition"></use>
+                    </svg>
+                    <div class="composition__text">Состав</div>
+                  </div>
+                </div>
+                <div class="calories">
+                    <div class="calories__content">
+                        <div class="calories__weight">
+                          <div class="calories__weight_text">1200</div>
+                        </div>
+                        <div class="calories__text">Ккал</div>
+                      </div>
+                </div>
+           <div class="slider__left">
+              <div class="burger__img">
+                <img src="./img/Chiken burger.png" alt="darkBeef" class="burger__pic">
+              </div>
+            </div>
+            <div class="slider__right">
+              <div class="slider__title">Dark BEEF Burger</div>
+              <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя
+                кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с
+                добавлением экзотического соуса чураско.</div>
+              <div class="slider__price">
+                <div class="price">
+                  <div class="price__numb">500</div>
+                  <div class="price__text">Рублей</div>
+                  <div class="button">
+                    <button class="btn btn--red">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
           <button class="scroll scroll__next">
             <svg class="arrow-scroll arrow-scroll__right">
               <use xlink:href="./img/sprite.svg#arrow"></use>
@@ -158,7 +198,7 @@
         <div class="team__container">
 
           <div class="team__title">Команда</div>
-          <ul class="team-acco">
+          <ul class="team-acco" id="team-accord">
             <li class="team-acco__item team-acco__item--active">
               <a href="#" class="team-acco__title">Дэниэл Редклиф</a>
               <div class="team-acco__content">
