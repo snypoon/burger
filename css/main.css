@@ -1197,7 +1197,9 @@ input, textarea {
   padding: 0.3125rem; }
 
 .modal__title {
-  font-family: Gagalin; }
+  font-family: Gagalin;
+  text-align: center;
+  font-size: 1.25rem; }
 
 .modal__text {
   line-height: 24px;

@@ -99,26 +99,26 @@ left.addEventListener("click", function () {
 });
 
 // Modal
-
-const modalOpenBtn = document.querySelector('#modal__open');
+const modalTitle = document.querySelector('.modal__title');
+const modalText = document.querySelector('.modal__text');
+const reviewsTitle = document.querySelector(".reviews__title");
+const reviewsText = document.querySelector('.reviews__text');
 const modalCloseBtn = document.querySelector("#modal__close");
 const modal = document.querySelector('#modal');
 const listReviuew = document.querySelector('.reviews__list');
 var body = document.querySelector('body');
-// var text = document.querySelector('.reviews__text');
-// var textcont = text.textContent;
-// var modaltext = document.querySelector('.modal__text');
 
 let activeModal = () => {
   modal.classList.toggle('modal__active');
   body.classList.toggle('menu--active');
-  // modaltext.textContent = textcont;
 };
 
 listReviuew.addEventListener('click',(e) => {
   e.preventDefault();
   let target = e.target;
   if (target.classList.contains('modal__open')) {
+    modalTitle.innerHTML = reviewsTitle.textContent;
+    modalText.innerHTML = reviewsText.textContent;
     activeModal();
   }
 });
@@ -127,3 +127,43 @@ modalCloseBtn.addEventListener('click',(e) => {
   e.preventDefault();
   activeModal();
 });
+
+// FORM
+const form = document.querySelector('#form');
+const sendButton = document.querySelector('#sendButton');
+
+var ajaxForm = function () {
+
+  let formData = new FormData();
+  formData.append("name", form.elements.name.value);
+  formData.append("phone", form.elements.phone.value);
+  formData.append("comment", form.elements.comment.value);
+  formData.append("to", "snypoon@me.com");
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+  xhr.responseType = "json";
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+  xhr.send(formData);
+  xhr.addEventListener('load', () => {
+    if ( xhr.response.status){
+      modalTitle.innerHTML = "отправка удалась!!!";
+      modalText.innerHTML = "";
+      activeModal();
+    }
+    else{
+      modalTitle.innerHTML = "произошла ошибка!!!";
+      modalText.innerHTML = "";
+      activeModal();
+    }
+  })
+
+  return xhr;
+};
+
+sendButton.addEventListener('click', e =>{
+  e.preventDefault();
+  ajaxForm();
+});
+

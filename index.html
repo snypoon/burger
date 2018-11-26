@@ -108,6 +108,7 @@
               <use xlink:href="./img/sprite.svg#arrow"></use>
             </svg>
           </button>
+          
           <ul class="slider__content" id="items">
             <li class="slider__item" id="item">
               <div class="composition">
@@ -356,7 +357,7 @@
                 </div>
               </div>
             </li>
-            <li class="slider__item" id="item">
+            <!-- <li class="slider__item" id="item">
               <div class="composition">
                 <div class="composition__content">
                   <svg class="composition__img">
@@ -437,8 +438,9 @@
                   </div>
                 </div>
               </div>
-            </li>
+            </li> -->
           </ul>
+          
           <button class="scroll scroll__next" id="right">
             <svg class="arrow-scroll arrow-scroll__right">
               <use xlink:href="./img/sprite.svg#arrow"></use>
@@ -690,16 +692,16 @@
           <div class="form__title">
             Закажите доставку
           </div>
-          <form class="main__form">
+          <form class="main__form" id="form">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__label">Имя</div>
-                  <input type="text" name="name" class="form__input">
+                  <input type="text" name="name" class="form__input" required>
                 </label>
                 <label class="form__block">
                   <div class="form__label">Телефон</div>
-                  <input type="text" name="phone" class="form__input">
+                  <input type="text" name="phone" class="form__input" required>
                 </label>
               </div>
               <div class="form__row">
@@ -731,18 +733,18 @@
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__label">Комментарий</div>
-                  <textarea class="form__input form__textarea" name="comment"></textarea>
+                  <textarea class="form__input form__textarea" name="comment" required></textarea>
                 </label>
               </div>
               <div class="form__buttons">
                 <div class="form__row">
                   <label class="form__radio">
-                    <input class="form__radio-elem" name="payment" type="radio" checked>
+                    <input class="form__radio-elem" name="payment" type="radio" value="cash" checked>
                     <div class="form__radio-fake"></div>
                     <div class="form__radio-title">Потребуется сдача</div>
                   </label>
                   <label class="form__radio">
-                    <input class="form__radio-elem" name="payment" type="radio">
+                    <input class="form__radio-elem" name="payment" type="radio" value="card">
                     <div class="form__radio-fake"></div>
                     <div class="form__radio-title">Оплата по карте</div>
                   </label>
@@ -755,7 +757,7 @@
                   </label>
                 </div>
                 <div class="form__row">
-                  <button class="btn btn--red">Заказать</button>
+                  <button class="btn btn--red" id="sendButton">Заказать</button>
                   <button class="form__reset">Очистить</button>
                 </div>
               </div>
@@ -829,20 +831,11 @@
       </nav>
     </div>
   </div>
-  <!-- Reviews Modal -->
+  <!-- Modal -->
   <div class="modal" id="modal">
     <div class="modal__block">
-      <h3 class="modal__title">Константин Спилберг</h3>
-      <div class="modal__text">
-        <p>
-          Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-          могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них
-          и
-          о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими,
-          котлетка
-          такой сочной, а сыр таким расплавленным.
-        </p>
-      </div>
+      <div class="modal__title"></div>
+      <div class="modal__text"></div>
       <button class="modal__close" id="modal__close"></button>
     </div>
   </div>
