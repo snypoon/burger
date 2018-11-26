@@ -38,6 +38,8 @@
 }
 .hambureg__nav, .nav__link:after{
   @include tablets{
-  margin: 15px auto;
+  margin: 17px auto;
+  width: rem(7px);
+  height: rem(7px);
   }
 }
