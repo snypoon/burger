@@ -21,7 +21,9 @@ nav.addEventListener('click', function (e) {
   e.preventDefault();
   target = e.target;
   if (target.className = 'nav__link') {
-    activeMenu();
+  menu.classList.remove('active');
+  bars.classList.remove('bars--active');
+  body.classList.remove('menu--active');
   };
 });
 
@@ -113,7 +115,7 @@ let activeModal = () => {
   body.classList.toggle('menu--active');
 };
 
-listReviuew.addEventListener('click',(e) => {
+listReviuew.addEventListener('click', (e) => {
   e.preventDefault();
   let target = e.target;
   if (target.classList.contains('modal__open')) {
@@ -123,7 +125,7 @@ listReviuew.addEventListener('click',(e) => {
   }
 });
 
-modalCloseBtn.addEventListener('click',(e) => {
+modalCloseBtn.addEventListener('click', (e) => {
   e.preventDefault();
   activeModal();
 });
@@ -147,12 +149,11 @@ var ajaxForm = function () {
   xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
   xhr.send(formData);
   xhr.addEventListener('load', () => {
-    if ( xhr.response.status){
+    if (xhr.response.status) {
       modalTitle.innerHTML = "отправка удалась!!!";
       modalText.innerHTML = "";
       activeModal();
-    }
-    else{
+    } else {
       modalTitle.innerHTML = "произошла ошибка!!!";
       modalText.innerHTML = "";
       activeModal();
@@ -162,8 +163,41 @@ var ajaxForm = function () {
   return xhr;
 };
 
-sendButton.addEventListener('click', e =>{
+sendButton.addEventListener('click', e => {
   e.preventDefault();
   ajaxForm();
 });
 
+// One Page Scroll (fullPage.js*css)
+
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+		autoScrolling:true,
+    scrollHorizontally: true,
+    continuousVertical: true,
+    navigation: true,
+	});
+    $('.nav__best').on('click', () => {
+      fullpage_api.moveTo(2);
+    });
+    $('.nav__slider').on('click', () => {
+      fullpage_api.moveTo(3);
+    });
+    $('.nav__team').on('click', () => {
+      fullpage_api.moveTo(4);
+    });
+    $('.nav__menu').on('click', () => {
+      fullpage_api.moveTo(5);
+    });
+    $('.nav__reviews').on('click', () => {
+      fullpage_api.moveTo(6);
+    });
+    $('.btn--red').on('click', () => {
+      fullpage_api.moveTo(7);
+    });
+    $('.nav__map').on('click', () => {
+      fullpage_api.moveTo(8);
+    });
+	$.fn.fullpage.setAllowScrolling(true);
+});

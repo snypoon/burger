@@ -8,12 +8,13 @@
   <title>Burgers</title>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./libs/fullpage.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="maincontent">
+    <div class="maincontent" id="fullpage">
       <!-- Hero Section-->
       <section class="hero section">
         <div class="container container--without-align">
@@ -24,13 +25,13 @@
             <div class="header__buttons">
               <nav class="nav">
                 <ul class="nav__list">
-                  <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
-                  <li class="nav__item"><a class="nav__link" href="#">Бургеры</a></li>
-                  <li class="nav__item"><a class="nav__link" href="#">Команда</a></li>
-                  <li class="nav__item"><a class="nav__link" href="#">Меню</a></li>
-                  <li class="nav__item"><a class="nav__link" href="#">Отзывы</a></li>
+                  <li class="nav__item nav__best"><a class="nav__link" href="#">О нас</a></li>
+                  <li class="nav__item nav__slider"><a class="nav__link" href="#">Бургеры</a></li>
+                  <li class="nav__item nav__team"><a class="nav__link" href="#">Команда</a></li>
+                  <li class="nav__item nav__menu"><a class="nav__link" href="#">Меню</a></li>
+                  <li class="nav__item nav__reviews"><a class="nav__link" href="#">Отзывы</a></li>
                   <li class="nav__item"><a class="nav__link" href="#">Как мы работаем</a></li>
-                  <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                  <li class="nav__item nav__map"><a class="nav__link" href="#">Контакты</a></li>
                 </ul>
               </nav>
               <a href="#" class="btn btn--red">Заказать</a>
@@ -450,6 +451,7 @@
       </section>
       <!-- Team Section -->
       <section class="team section">
+        <div class="team__wrapper">
         <div class="team__container">
 
           <div class="team__title">Команда</div>
@@ -511,7 +513,7 @@
               </div>
             </li>
           </ul>
-
+        </div>
         </div>
       </section>
       <!-- Menu Section -->
@@ -758,7 +760,7 @@
                 </div>
                 <div class="form__row">
                   <button class="btn btn--red" id="sendButton">Заказать</button>
-                  <button class="form__reset">Очистить</button>
+                  <button class="form__reset" type="reset">Очистить</button>
                 </div>
               </div>
             </div>
@@ -819,14 +821,14 @@
   <div class="hamburger__menu" id="hamburger__menu">
     <div class="hamburger__menu__items">
       <nav class="nav hamburger__nav">
-        <ul class="nav__list hamburger__nav__list">
-          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">О нас</a></li>
-          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Бургеры</a></li>
-          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Команда</a></li>
-          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Меню</a></li>
-          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Отзывы</a></li>
+        <ul class="nav__list hamburger__nav__list" id="myMenu">
+          <li class="nav__item nav__best hamburger__nav__item"><a class="nav__link" href="#">О нас</a></li>
+          <li class="nav__item nav__slider hamburger__nav__item"><a class="nav__link" href="#">Бургеры</a></li>
+          <li class="nav__item nav__team hamburger__nav__item"><a class="nav__link" href="#">Команда</a></li>
+          <li class="nav__item nav__menu hamburger__nav__item"><a class="nav__link" href="#">Меню</a></li>
+          <li class="nav__item nav__reviews hamburger__nav__item"><a class="nav__link" href="#">Отзывы</a></li>
           <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Как мы работаем</a></li>
-          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Контакты</a></li>
+          <li class="nav__item nav__map hamburger__nav__item"><a class="nav__link" href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -839,6 +841,8 @@
       <button class="modal__close" id="modal__close"></button>
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./libs/fullpage.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

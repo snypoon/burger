@@ -56,6 +56,9 @@
   width: 0;
   overflow: hidden;
   transition: width 0.3s;
+  @include tablets{
+    transition: none;
+  }
 }
 .menu-acco__item--active{
   .menu-acco__block-text{
@@ -68,4 +71,7 @@
       width: 100%;
     }
   }
+}
+.menu-acco__text{
+  padding: rem(20px);
 }
