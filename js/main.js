@@ -175,9 +175,9 @@ $(document).ready(function() {
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 		autoScrolling:true,
     scrollHorizontally: true,
-    continuousVertical: true,
+    // continuousVertical: true,
     navigation: true,
-    normalScrollElements: '#map',
+    // normalScrollElements: '#map',
 	});
     $('.nav__best').on('click', () => {
       fullpage_api.moveTo(2);
