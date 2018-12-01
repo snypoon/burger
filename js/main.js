@@ -193,11 +193,17 @@ $(document).ready(function() {
     $('.nav__reviews').on('click', () => {
       fullpage_api.moveTo(6);
     });
-    $('.btn--red').on('click', () => {
+    $('.nav__video').on('click', () => {
       fullpage_api.moveTo(7);
     });
-    $('.nav__map').on('click', () => {
+    $('.btn--red').on('click', () => {
       fullpage_api.moveTo(8);
+    });
+    $('.nav__map').on('click', () => {
+      fullpage_api.moveTo(9);
     });
 	$.fn.fullpage.setAllowScrolling(true);
 });
+
+// Video Player
+

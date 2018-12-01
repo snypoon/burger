@@ -7,7 +7,14 @@
   flex-direction: initial;
   align-items: center;
   position: relative;
+  // overflow: hidden;
+}
+.slider__wrapper{
+  position: relative;
+  align-items: center;
   overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 .slider__content{
   transition: 0.3s;
@@ -94,12 +101,12 @@
   }
 }
 .scroll__prev{
-  position: absolute;
+  position: relative;
   left: 0;
   z-index: 1;
 }
 .scroll__next{
-  position: absolute;
+  position: relative;
   right: 0;
 }
 .arrow-scroll__right{
@@ -171,7 +178,7 @@ text-align: center;
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 270px;
+  width: rem(270px);
   background-color: #ffffff;
   opacity: 0.9;
   border-radius: rem(5px);

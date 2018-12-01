@@ -958,8 +958,16 @@ input, textarea {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative; }
+
+.slider__wrapper {
   position: relative;
-  overflow: hidden; }
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
 
 .slider__content {
   -webkit-transition: 0.3s;
@@ -1064,12 +1072,12 @@ input, textarea {
     transform: scale(1.5); }
 
 .scroll__prev {
-  position: absolute;
+  position: relative;
   left: 0;
   z-index: 1; }
 
 .scroll__next {
-  position: absolute;
+  position: relative;
   right: 0; }
 
 .arrow-scroll__right {
@@ -1151,7 +1159,7 @@ input, textarea {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 270px;
+  width: 16.875rem;
   background-color: #ffffff;
   opacity: 0.9;
   border-radius: 0.3125rem;
@@ -1258,3 +1266,6 @@ input, textarea {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); }
+
+.video {
+  background: url("../img/BG_video.jpg") center center/cover no-repeat; }
