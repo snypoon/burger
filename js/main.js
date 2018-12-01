@@ -177,6 +177,7 @@ $(document).ready(function() {
     scrollHorizontally: true,
     continuousVertical: true,
     navigation: true,
+    normalScrollElements: '#map',
 	});
     $('.nav__best').on('click', () => {
       fullpage_api.moveTo(2);
@@ -205,5 +206,40 @@ $(document).ready(function() {
 	$.fn.fullpage.setAllowScrolling(true);
 });
 
-// Video Player
+// YaMap
+
+ymaps.ready(init);
+function init(){  
+    var myMap = new ymaps.Map("map", {
+        center: [59.940293, 30.312926],
+        zoom: 11,
+    });
+    var myPlacemark1 = new ymaps.Placemark([59.947055, 30.383846], {balloonContent: "Mr.Burger, Тверская улица, 12/15А"}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/map-marker.svg',
+      iconImageSize: [46, 57],
+    });
+    var myPlacemark2 = new ymaps.Placemark([59.972610, 30.307247], {balloonContent: "Mr.Burger, улица Чапыгина, 3"}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/map-marker.svg',
+      iconImageSize: [46, 57],
+      });
+    var myPlacemark3 = new ymaps.Placemark([59.921632, 30.475123], {balloonContent: "Mr.Burger, улица Коллонтай, 24к2"}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/map-marker.svg',
+      iconImageSize: [46, 57],
+      }); 
+    var myPlacemark4 = new ymaps.Placemark([59.890722, 30.318269], {balloonContent: "Mr.Burger, Московский проспект, 107Б"}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/map-marker.svg',
+      iconImageSize: [46, 57],
+      });    
+    myMap.geoObjects.add(myPlacemark1);
+    myMap.geoObjects.add(myPlacemark2);
+    myMap.geoObjects.add(myPlacemark3);
+    myMap.geoObjects.add(myPlacemark4);
+    myMap.controls.remove('searchControl');
+    myMap.controls.remove('typeSelector');
+    myMap.behaviors.disable("scrollZoom");
+}
 
