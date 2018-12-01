@@ -177,7 +177,7 @@ $(document).ready(function() {
     scrollHorizontally: true,
     continuousVertical: true,
     navigation: true,
-    // normalScrollElements: '#map',
+    normalScrollElements: '#map',
 	});
     $('.nav__best').on('click', () => {
       fullpage_api.moveTo(2);
