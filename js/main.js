@@ -294,7 +294,6 @@ let VolumeOff = ()=> {
     //Клики по экрану и кнопкам
 $(PlayBtn).on('click',PlayStop);
 $(VideoPlayer).on('click',PlayStop);
-$(VideoControl).on('currentTime',updateDuration);
 $(VideoControl).on('click',setVideoDuration);
 $(VideoControl).on('onmousemove',setVideoDuration);
 $(VolumeControl).on('click',ChangeVolumeFunction);
