@@ -7,27 +7,34 @@
 .nav__list{
   display: flex;
 }
-.nav__item:last-child .nav__link:after{
+.nav__item {
+  display: flex;
+  align-items: center;
+  &:after{
+    content: "";
+    width: rem(4px);
+    height: rem(4px);
+    display: block;
+    border-radius: 50%;
+    background: white;   
+    margin: 0 rem(16px);
+  }
+  @include tablets{
+    flex-direction: column;
+  }
+}
+
+.nav__item:last-child::after{
   display: none;
 }
 .nav__link{
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
   &:hover{
     text-decoration: underline;
   }
-    &:after{
-      content: "";
-      width: rem(4px);
-      height: rem(4px);
-      display: block;
-      border-radius: 50%;
-      background: white;   
-      margin: 0 rem(16px);
-    }
+    
 }
 .hambureg__nav, .nav__link{
   @include tablets{
@@ -36,8 +43,16 @@
   flex-direction: column;
 }
 }
-.hambureg__nav, .nav__link:after{
+.hambureg__nav, .nav__item:after{
   @include tablets{
-  margin: 15px auto;
+  margin: rem(17px) auto;
+  width: rem(7px);
+  height: rem(7px);
+  }
+}
+
+#fp-nav{
+  @include tablets{
+    z-index: 0;
   }
 }

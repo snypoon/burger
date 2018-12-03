@@ -56,13 +56,16 @@
   right: 0;
   bottom: 0;
   display: flex;
+  margin: auto;
+  justify-content: center;
   left: rem(-9999px);
   align-items: center;
-  justify-content: center;
   opacity: 0;
   z-index: 1;
   transition: all 0.5s;
-}
+  }
+
+
 .active{
   display: flex;
   z-index: 3;
@@ -76,7 +79,11 @@
   display: flex;
 }
 .hamburger__nav__list{
+  @include tablets{
   flex-direction: column;
   text-align: center;
   align-items: center;
+}}
+.menu--active{
+  overflow: hidden;
 }
