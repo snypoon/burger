@@ -36,11 +36,15 @@ let teamAction = () => {
       e.preventDefault();
       let teamActiveItem = document.querySelector('.team-acco__item.team-acco__item--active');
       if (teamActiveItem) {
+        let teamContent = teamActiveItem.querySelector('.team-acco__content');
+        teamContent.style.height = '0px';
         teamActiveItem.classList.remove('team-acco__item--active');
       }
       if (!teamActiveItem || teamActiveItem.querySelector(".team-acco__title") !== this) {
         let teamItem = this.closest('.team-acco__item');
         teamItem.classList.add('team-acco__item--active');
+        let teamItemInfo = teamItem.querySelector('.team-acco__content');
+        teamItemInfo.style.height = teamItemInfo.scrollHeight + 'px';
       }
     })
   })
@@ -212,7 +216,7 @@ ymaps.ready(init);
 function init(){  
     var myMap = new ymaps.Map("map", {
         center: [59.940293, 30.312926],
-        zoom: 12,
+        zoom: 11,
     });
     var myPlacemark1 = new ymaps.Placemark([59.947055, 30.383846], {balloonContent: "Mr.Burger, Тверская улица, 12/15А"}, {
       iconLayout: 'default#image',
@@ -243,3 +247,61 @@ function init(){
     myMap.behaviors.disable("scrollZoom");
 }
 
+// VideoPlayer
+
+let VideoPlayer = document.querySelector('#player');
+let PlayBtn = document.querySelectorAll('.play');
+let SoundBtn = document.querySelector('.sound__img');
+let VideoControl = document.querySelector('#playerlvl');
+let VolumeControl = document.querySelector('#soundlvl');
+let interval;
+    // Функция запуска и паузы видео 
+let PlayStop = ()=> {
+  $('.play__btn').toggleClass('play__btn--active');
+  VideoControl.max = VideoPlayer.duration;
+  if(VideoPlayer.paused){
+    VideoPlayer.play();
+    Interval = setInterval(updateDuration,1000/66);
+  }else{
+    VideoPlayer.pause();
+    clearInterval(Interval);
+  }
+};
+    // Функция перемотки видео 
+let setVideoDuration = ()=> {
+  VideoPlayer.currentTime = VideoControl.value; 
+  Interval = setInterval(updateDuration,1000/66);
+};    
+    // Функция позиции ползунка видео
+let updateDuration = ()=> {
+  VideoControl.value = VideoPlayer.currentTime;
+};
+    // Функция измения громкоски
+let ChangeVolumeFunction = ()=> {
+  VideoPlayer.volume = VolumeControl.value/10; 
+};
+    // Функция выключения громкости по кнопке
+let VolumeOff = ()=> {
+  if (VideoPlayer.volume === 0){
+      VideoPlayer.volume = soundLevel;
+      VolumeControl.value = soundLevel*10;
+  }else{
+      soundLevel = VideoPlayer.volume;
+      VideoPlayer.volume = 0;
+      VolumeControl.value = 0;
+  }    
+};
+    //Клики по экрану и кнопкам
+$(PlayBtn).on('click',PlayStop);
+$(VideoPlayer).on('click',PlayStop);
+$(VideoControl).on('currentTime',updateDuration);
+$(VideoControl).on('click',setVideoDuration);
+$(VideoControl).on('onmousemove',setVideoDuration);
+$(VolumeControl).on('click',ChangeVolumeFunction);
+$(VolumeControl).on('onmousemove',ChangeVolumeFunction);
+$(SoundBtn).on('click',VolumeOff);
+    //значения ползунков громкости и видео 
+VideoControl.min = 0
+VideoControl.value = 0;
+VolumeControl.min = 0;
+VolumeControl.max = 10;

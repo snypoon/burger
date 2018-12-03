@@ -33,6 +33,7 @@
     content: "";
     width: rem(9px);
     height: rem(7px);
+    transition: all 0.5s;
     display: inline-flex;
     margin-right: rem(10px);
     background: url('../img/down.png')center center / cover no-repeat;  
@@ -47,6 +48,7 @@
   display: flex;
   margin: rem(20px);
   height: 0;
+  transition: all 0.5s;
   overflow: hidden;
   @include tablets{
     flex-direction: column;
@@ -73,11 +75,13 @@ padding-top: rem(9px);
   .team-acco__content{
   overflow: initial;
   height: 100%;
+  transition: all 0.5s;
   }
   .team-acco__title{
     color: $yellow;
       &::before{
-       background: url('../img/up.png');
+      transition: all 0.5s;
+      transform: rotate(180deg);
        }
     }
   }

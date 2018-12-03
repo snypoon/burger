@@ -691,7 +691,25 @@
       <!-- Video Section -->
       <section class="video section">
         <div class="title title--color-black">как мы работаем</div>
-        
+        <div class="player__wrapper">
+          <div class="video__player">
+            <video id="player" poster="./img/video_poster.jpg">
+            <source src="/src/videoplayback.mp4" type="video/mp4">
+            </video>
+            <img src="./img/player/Play_white.png" class="play play__btn"></img>
+            <div class="video__toolbar">
+            <div class="playertype">
+                <img src="./img/player/Play_gray.png"  class="play play__img"></img>
+                <input type="range" class="playertype__length" id="playerlvl">
+            </div>
+            <div class="sound">
+                <img src="./img/player/Volum_gray.png" class="sound__img" id="sound"></img>
+                <input type="range" class="sound__lenght" id="soundlvl">
+            </div>
+        </div>
+          </div>
+          
+        </div>
       </section>
       <!-- Form Section -->
       <section class="form section">
@@ -830,7 +848,7 @@
           <li class="nav__item nav__team hamburger__nav__item"><a class="nav__link" href="#">Команда</a></li>
           <li class="nav__item nav__menu hamburger__nav__item"><a class="nav__link" href="#">Меню</a></li>
           <li class="nav__item nav__reviews hamburger__nav__item"><a class="nav__link" href="#">Отзывы</a></li>
-          <li class="nav__item hamburger__nav__item"><a class="nav__link" href="#">Как мы работаем</a></li>
+          <li class="nav__item nav__video hamburger__nav__item"><a class="nav__link" href="#">Как мы работаем</a></li>
           <li class="nav__item nav__map hamburger__nav__item"><a class="nav__link" href="#">Контакты</a></li>
         </ul>
       </nav>

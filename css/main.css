@@ -496,11 +496,6 @@ input, textarea {
   -webkit-transition: width 0.3s;
   -o-transition: width 0.3s;
   transition: width 0.3s; }
-  @media (max-width: 768px) {
-    .menu-acco__content {
-      -webkit-transition: none;
-      -o-transition: none;
-      transition: none; } }
 
 .menu-acco__item--active .menu-acco__block-text {
   color: #f9b43b; }
@@ -562,6 +557,9 @@ input, textarea {
     content: "";
     width: 0.5625rem;
     height: 0.4375rem;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -580,6 +578,9 @@ input, textarea {
   display: flex;
   margin: 1.25rem;
   height: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   overflow: hidden; }
   @media (max-width: 768px) {
     .team-acco__content {
@@ -605,12 +606,20 @@ input, textarea {
 
 .team-acco__item--active .team-acco__content {
   overflow: initial;
-  height: 100%; }
+  height: 100%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
 
 .team-acco__item--active .team-acco__title {
   color: #f9b43b; }
   .team-acco__item--active .team-acco__title::before {
-    background: url("../img/up.png"); }
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
 
 .form {
   background: url("../img/dostavkabg.jpg") center center/cover no-repeat; }
@@ -1268,3 +1277,118 @@ input, textarea {
 
 .video {
   background: url("../img/BG_video.jpg") center center/cover no-repeat; }
+
+.player__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 3.125rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#player {
+  max-width: 100%;
+  max-height: 100%; }
+
+.video__player {
+  widows: 100%;
+  position: relative; }
+
+.play__btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
+
+.play__btn--active {
+  opacity: 0; }
+
+.video__toolbar {
+  width: 100%;
+  height: 2.1875rem;
+  background-color: #3e3e3e;
+  margin-top: -0.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.playertype {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.play__img {
+  padding: 0.3125rem;
+  cursor: pointer; }
+
+.playertype__length {
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 0.0625rem;
+  background-color: #626262;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; }
+
+.playertype__length::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #626262;
+  cursor: pointer;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%; }
+
+.sound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.sound__img {
+  padding-left: 0.625rem;
+  cursor: pointer; }
+
+.sound__lenght {
+  width: 3.625rem;
+  height: 0.25rem;
+  margin: 0.3125rem;
+  border-radius: 0.0625rem;
+  background-color: #626262;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; }
+
+.sound__lenght::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #626262;
+  cursor: pointer;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%; }
