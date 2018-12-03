@@ -271,7 +271,11 @@ let PlayStop = ()=> {
 let setVideoDuration = ()=> {
   VideoPlayer.currentTime = VideoControl.value; 
   Interval = setInterval(updateDuration,1000/66);
-};    
+};
+    // Функция очищает интервал , позволяя двигать ползунок
+let stopInterval = ()=> {
+  clearInterval(Interval);
+ }       
     // Функция позиции ползунка видео
 let updateDuration = ()=> {
   VideoControl.value = VideoPlayer.currentTime;
@@ -296,6 +300,7 @@ $(PlayBtn).on('click',PlayStop);
 $(VideoPlayer).on('click',PlayStop);
 $(VideoControl).on('click',setVideoDuration);
 $(VideoControl).on('onmousemove',setVideoDuration);
+$(VideoControl).on('mousedown',stopInterval);
 $(VolumeControl).on('click',ChangeVolumeFunction);
 $(VolumeControl).on('onmousemove',ChangeVolumeFunction);
 $(SoundBtn).on('click',VolumeOff);
