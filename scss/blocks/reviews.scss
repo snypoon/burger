@@ -35,10 +35,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 15%;
+  padding: 10%;
   overflow: hidden;
   @include tablets{
-    padding: 0;
     text-align: center;
     align-items: center;
     padding: 5%

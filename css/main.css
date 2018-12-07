@@ -402,11 +402,10 @@ input, textarea {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  padding: 15%;
+  padding: 10%;
   overflow: hidden; }
   @media (max-width: 768px) {
     .reviews__hover-block {
-      padding: 0;
       text-align: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1296,6 +1295,7 @@ input, textarea {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
@@ -1305,7 +1305,7 @@ input, textarea {
   cursor: pointer; }
 
 .video__player {
-  width: 100%;
+  width: 85%;
   position: relative; }
 
 .play__btn {
