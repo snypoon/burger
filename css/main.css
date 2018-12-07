@@ -1296,7 +1296,6 @@ input, textarea {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }

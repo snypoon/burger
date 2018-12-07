@@ -215,8 +215,8 @@ $(document).ready(function() {
 ymaps.ready(init);
 function init(){  
     var myMap = new ymaps.Map("map", {
-        center: [59.940293, 30.312926],
-        zoom: 11,
+        center: [59.930463, 30.360493],
+        zoom: 12,
     });
     var myPlacemark1 = new ymaps.Placemark([59.947055, 30.383846], {balloonContent: "Mr.Burger, Тверская улица, 12/15А"}, {
       iconLayout: 'default#image',
