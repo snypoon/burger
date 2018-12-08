@@ -1307,6 +1307,9 @@ input, textarea {
 .video__player {
   width: 85%;
   position: relative; }
+  @media (max-width: 480px) {
+    .video__player {
+      width: 100%; } }
 
 .play__btn {
   position: absolute;

@@ -18,6 +18,9 @@
 .video__player{
   width: 85%;
   position: relative;
+  @include phones{
+    width: 100%;
+  }
 }
 .play__btn{
   position: absolute;
