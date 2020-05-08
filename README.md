@@ -1,5 +1,2 @@
-* Учебный проект : Алешина Ильи 
-* Наставник : Иванов Максим 
-* Курс : Веб-разработка для начинающих 
 
-https://snypoon.github.io/Burger/
+* https://snypoon.github.io/Burger/
